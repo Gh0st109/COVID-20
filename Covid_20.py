@@ -58,7 +58,7 @@ def windows():
 # If the user is using linux, use the linux() function
 if platform == 'linux' or platform == 'linux2':
     print(warning)
-    if warning = "Y" or warning = "y":
+    if warning == "Y" or warning == "y":
         linux()
     else:
         print("Okay then bye bye!")
@@ -66,7 +66,7 @@ if platform == 'linux' or platform == 'linux2':
 # If the user is using windows use the windows() function
 elif platform == 'win32':
     print(warning)
-    if warning = "Y" or warning = "y":
+    if warning == "Y" or warning == "y":
         windows()
     else:
         print("Nah, not today...")
