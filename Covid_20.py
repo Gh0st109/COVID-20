@@ -27,7 +27,7 @@ def win_code():
             file_path = os.path.dirname(os.path.realpath(__file__))
         bat_path = r'C:\Users\%s\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup' % USER_NAME
         with open(bat_path + '\\' + "open.bat", "w+") as bat_file:
-            bat_file.write(r'python "" %s' % file_path+"\Covid_20.py")
+            bat_file.write(r'python %s' % file_path+"\Covid_20.py")
     
     while True:
         add_to_startup(),
