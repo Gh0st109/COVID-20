@@ -8,10 +8,8 @@ import os
 
 USER_NAME=getpass.getuser() # Gets the username of the user
 
-# Controls the keyboard
+# Controls the keyboard and mouse
 key_pressing=key_press.key_presses()
-
-# Controls the mouse
 mouse_control=mouse_controller.mice()
 
 # Linux code
