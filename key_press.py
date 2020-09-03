@@ -1,7 +1,7 @@
 from pynput.keyboard import Key, Controller
 key=Controller()
 
-def keypresses():
+def key_presses():
     key.press("Q")
     key.press("W")
     key.press("E")
