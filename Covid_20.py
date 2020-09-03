@@ -9,13 +9,7 @@ USER_NAME=getpass.getuser() # Gets the username of the user
 key=Controller()
 
 # Controls the keyboard
-def keypresses():
-    key.press("Q")
-    key.press("W")
-    key.press("E")
-    key.press("R")
-    key.press("T")
-    key.press("Y")
+
 
 # Controls the mouse
 mouse_control=mouse_controller.mice()
