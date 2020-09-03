@@ -6,9 +6,8 @@ import key_press
 import getpass
 import os
 
-USER_NAME=getpass.getuser() # Gets the username of the user
-
 # Controls the keyboard and mouse
+USER_NAME=getpass.getuser() # Gets the username of the user
 key_pressing=key_press.key_presses()
 mouse_control=mouse_controller.mice()
 
