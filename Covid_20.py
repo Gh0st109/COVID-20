@@ -2,14 +2,14 @@ from sys import platform
 from pynput.mouse import Button, Controller
 from pynput.keyboard import Key, Controller
 import mouse_controller
+import key_press
 import getpass
 import os
 
 USER_NAME=getpass.getuser() # Gets the username of the user
-key=Controller()
 
 # Controls the keyboard
-
+key_pressing=key_press.
 
 # Controls the mouse
 mouse_control=mouse_controller.mice()
