@@ -1,4 +1,4 @@
-from pynput import Key, Controller
+from pynput.keyboard import Key, Controller
 key=Controller()
 
 def keypresses():
