@@ -38,5 +38,5 @@ def win_code():
 # If the user is using linux, use the linux() function
 if platform == 'linux' or platform == 'linux2': linux()
     
-# If the user is using windows use the windows() function
+# If the user is using windows use the win_code() function
 elif platform == 'win32': win_code() 
